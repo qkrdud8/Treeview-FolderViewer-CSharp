@@ -1,0 +1,10 @@
+C:\Users\aaa\source\repos\folder_management\folder_management\bin\Debug\folder_management.exe.config
+C:\Users\aaa\source\repos\folder_management\folder_management\bin\Debug\folder_management.exe
+C:\Users\aaa\source\repos\folder_management\folder_management\bin\Debug\folder_management.pdb
+C:\Users\aaa\source\repos\folder_management\folder_management\obj\Debug\folder_management.csprojAssemblyReference.cache
+C:\Users\aaa\source\repos\folder_management\folder_management\obj\Debug\folder_management.Form1.resources
+C:\Users\aaa\source\repos\folder_management\folder_management\obj\Debug\folder_management.Properties.Resources.resources
+C:\Users\aaa\source\repos\folder_management\folder_management\obj\Debug\folder_management.csproj.GenerateResource.cache
+C:\Users\aaa\source\repos\folder_management\folder_management\obj\Debug\folder_management.csproj.CoreCompileInputs.cache
+C:\Users\aaa\source\repos\folder_management\folder_management\obj\Debug\folder_management.exe
+C:\Users\aaa\source\repos\folder_management\folder_management\obj\Debug\folder_management.pdb

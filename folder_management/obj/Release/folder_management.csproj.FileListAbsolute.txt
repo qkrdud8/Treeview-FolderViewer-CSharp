@@ -1,0 +1,9 @@
+C:\Users\aaa\Desktop\folder_management (2)\folder_management\bin\Release\no.exe.config
+C:\Users\aaa\Desktop\folder_management (2)\folder_management\bin\Release\no.exe
+C:\Users\aaa\Desktop\folder_management (2)\folder_management\bin\Release\no.pdb
+C:\Users\aaa\Desktop\folder_management (2)\folder_management\obj\Release\folder_management.Form1.resources
+C:\Users\aaa\Desktop\folder_management (2)\folder_management\obj\Release\folder_management.Properties.Resources.resources
+C:\Users\aaa\Desktop\folder_management (2)\folder_management\obj\Release\folder_management.csproj.GenerateResource.cache
+C:\Users\aaa\Desktop\folder_management (2)\folder_management\obj\Release\folder_management.csproj.CoreCompileInputs.cache
+C:\Users\aaa\Desktop\folder_management (2)\folder_management\obj\Release\no.exe
+C:\Users\aaa\Desktop\folder_management (2)\folder_management\obj\Release\no.pdb
