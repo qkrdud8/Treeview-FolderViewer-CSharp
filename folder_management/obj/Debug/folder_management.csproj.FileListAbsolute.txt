@@ -8,3 +8,17 @@ C:\Users\aaa\source\repos\folder_management\folder_management\obj\Debug\folder_m
 C:\Users\aaa\source\repos\folder_management\folder_management\obj\Debug\folder_management.csproj.CoreCompileInputs.cache
 C:\Users\aaa\source\repos\folder_management\folder_management\obj\Debug\folder_management.exe
 C:\Users\aaa\source\repos\folder_management\folder_management\obj\Debug\folder_management.pdb
+C:\Users\Zeliper\Documents\GitHub\Treeview-FolderViewer-CSharp\folder_management\bin\Debug\folder_managementpratice.exe.config
+C:\Users\Zeliper\Documents\GitHub\Treeview-FolderViewer-CSharp\folder_management\bin\Debug\folder_managementpratice.exe
+C:\Users\Zeliper\Documents\GitHub\Treeview-FolderViewer-CSharp\folder_management\bin\Debug\folder_managementpratice.pdb
+C:\Users\Zeliper\Documents\GitHub\Treeview-FolderViewer-CSharp\folder_management\bin\Debug\System.Net.Http.dll
+C:\Users\Zeliper\Documents\GitHub\Treeview-FolderViewer-CSharp\folder_management\bin\Debug\System.Net.Http.xml
+C:\Users\Zeliper\Documents\GitHub\Treeview-FolderViewer-CSharp\folder_management\bin\Debug\ko\System.Net.Http.resources.dll
+C:\Users\Zeliper\Documents\GitHub\Treeview-FolderViewer-CSharp\folder_management\obj\Debug\folder_management.csprojAssemblyReference.cache
+C:\Users\Zeliper\Documents\GitHub\Treeview-FolderViewer-CSharp\folder_management\obj\Debug\folder_management.Form1.resources
+C:\Users\Zeliper\Documents\GitHub\Treeview-FolderViewer-CSharp\folder_management\obj\Debug\folder_management.Properties.Resources.resources
+C:\Users\Zeliper\Documents\GitHub\Treeview-FolderViewer-CSharp\folder_management\obj\Debug\folder_management.csproj.GenerateResource.cache
+C:\Users\Zeliper\Documents\GitHub\Treeview-FolderViewer-CSharp\folder_management\obj\Debug\folder_management.csproj.CoreCompileInputs.cache
+C:\Users\Zeliper\Documents\GitHub\Treeview-FolderViewer-CSharp\folder_management\obj\Debug\folder_management.csproj.CopyComplete
+C:\Users\Zeliper\Documents\GitHub\Treeview-FolderViewer-CSharp\folder_management\obj\Debug\folder_managementpratice.exe
+C:\Users\Zeliper\Documents\GitHub\Treeview-FolderViewer-CSharp\folder_management\obj\Debug\folder_managementpratice.pdb

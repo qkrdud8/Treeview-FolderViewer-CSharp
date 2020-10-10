@@ -18,8 +18,6 @@ namespace folder_management
         public Form1()
         {
             InitializeComponent();
-
-
         }
 
 
@@ -28,10 +26,10 @@ namespace folder_management
             FolderBrowserDialog fbd = new FolderBrowserDialog();
             if (fbd.ShowDialog() == DialogResult.OK)
             {
-
+                //선택 됬을때 (DialogResult가 OK일때 실행되야 함으로 if문안에 들어가야함
+                treeView1.Nodes.Add(Makenode(fbd.SelectedPath));
+                ppath = fbd.SelectedPath;
             }
-            treeView1.Nodes.Add(Makenode(fbd.SelectedPath));
-            ppath = fbd.SelectedPath;
         }
 
 
@@ -46,6 +44,7 @@ namespace folder_management
 
             if (di.Attributes == FileAttributes.Directory)
             {
+                //변수 string d, f는 각각 foreach문에서만 동작하는 지역변수임으로 같은 이름을 사용하여도 상관없음
                 foreach (string d in Directory.GetDirectories(path))
                 {
                     output.Nodes.Add(Makenode(d));
@@ -67,11 +66,13 @@ namespace folder_management
             {
                 Directory.Delete((string)treeView1.SelectedNode.Tag, true);
                 treeView1.SelectedNode.Remove();
-            }
-            else
+                
+            }   
+            else //파일이 존제하는지도 확인을 해야함.(오류방지)
             {
                 File.Delete((string)treeView1.SelectedNode.Tag);
                 treeView1.SelectedNode.Remove();
+                
             }
 
         }
