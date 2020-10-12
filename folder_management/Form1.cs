@@ -19,7 +19,6 @@ namespace folder_management
         {
             InitializeComponent();
 
-
         }
 
 
@@ -28,10 +27,10 @@ namespace folder_management
             FolderBrowserDialog fbd = new FolderBrowserDialog();
             if (fbd.ShowDialog() == DialogResult.OK)
             {
-
+                treeView1.Nodes.Add(Makenode(fbd.SelectedPath));
+                ppath = fbd.SelectedPath;
             }
-            treeView1.Nodes.Add(Makenode(fbd.SelectedPath));
-            ppath = fbd.SelectedPath;
+            
         }
 
 
@@ -50,9 +49,9 @@ namespace folder_management
                 {
                     output.Nodes.Add(Makenode(d));
                 }
-                foreach (string f in Directory.GetFiles(path))
+                foreach (string d in Directory.GetFiles(path))
                 {
-                    output.Nodes.Add(Makenode(f));
+                    output.Nodes.Add(Makenode(d));
                 }
                 
             }
@@ -68,7 +67,7 @@ namespace folder_management
                 Directory.Delete((string)treeView1.SelectedNode.Tag, true);
                 treeView1.SelectedNode.Remove();
             }
-            else
+            else if (File.Exists((string)treeView1.SelectedNode.Tag)) 
             {
                 File.Delete((string)treeView1.SelectedNode.Tag);
                 treeView1.SelectedNode.Remove();
