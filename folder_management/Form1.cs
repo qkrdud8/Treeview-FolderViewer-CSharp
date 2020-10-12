@@ -44,15 +44,16 @@ namespace folder_management
 
             if (di.Attributes == FileAttributes.Directory)
             {
+                output.Nodes.Add("");
                 //변수 string d, f는 각각 foreach문에서만 동작하는 지역변수임으로 같은 이름을 사용하여도 상관없음
-                foreach (string d in Directory.GetDirectories(path))
-                {
-                    output.Nodes.Add(Makenode(d));
-                }
-                foreach (string f in Directory.GetFiles(path))
-                {
-                    output.Nodes.Add(Makenode(f));
-                }
+                //foreach (string d in Directory.GetDirectories(path))
+                //{
+                //    output.Nodes.Add(Makenode(d));
+                //}
+                //foreach (string f in Directory.GetFiles(path))
+                //{
+                //  output.Nodes.Add(Makenode(f));
+                //}
                 
             }
             return output;            
@@ -83,6 +84,34 @@ namespace folder_management
             Directory.CreateDirectory(pathstring+"\\"+textBox1.Text);
             treeView1.Nodes.Clear();
             treeView1.Nodes.Add(Makenode(ppath));
+            
+        }
+
+        private void treeView1_AfterExpand(object sender, TreeViewEventArgs e)
+        {
+            e.Node.Nodes.Clear();
+            foreach (string d in Directory.GetDirectories((string)e.Node.Tag))
+            {
+                TreeNode tn = new TreeNode();
+                tn.Tag = d;
+                tn.Text = Path.GetFileName(d);
+                tn.Nodes.Add("");
+                e.Node.Nodes.Add(tn);
+            }
+            foreach (string d in Directory.GetFiles((string)e.Node.Tag))
+            {
+                TreeNode tn = new TreeNode();
+                tn.Tag = d;
+                tn.Text = Path.GetFileName(d);
+                e.Node.Nodes.Add(tn);
+            }
+        }
+
+        private void treeView1_AfterCollapse(object sender, TreeViewEventArgs e)
+        {
+            e.Node.Nodes.Clear();
+            e.Node.Nodes.Add("");
+
             
         }
     }
