@@ -18,7 +18,6 @@ namespace folder_management
         public Form1()
         {
             InitializeComponent();
-
         }
 
 
@@ -31,20 +30,19 @@ namespace folder_management
                 ppath = fbd.SelectedPath;
             }
             
+
         }
-
-
-
         public TreeNode Makenode(string path)
         {
             TreeNode output = new TreeNode();
             DirectoryInfo di = new DirectoryInfo(path);
             output.Tag = path;
             output.Text = Path.GetFileName((string)output.Tag);
-            
+
 
             if (di.Attributes == FileAttributes.Directory)
             {
+
                 foreach (string d in Directory.GetDirectories(path))
                 {
                     output.Nodes.Add(Makenode(d));
@@ -53,10 +51,14 @@ namespace folder_management
                 {
                     output.Nodes.Add(Makenode(d));
                 }
-                
+
+                output.Nodes.Add("");
             }
-            return output;            
+            return output;
         }
+
+
+
 
 
 
@@ -67,12 +69,11 @@ namespace folder_management
                 Directory.Delete((string)treeView1.SelectedNode.Tag, true);
                 treeView1.SelectedNode.Remove();
             }
-            else if (File.Exists((string)treeView1.SelectedNode.Tag)) 
+            else if (File.Exists((string)treeView1.SelectedNode.Tag))
             {
                 File.Delete((string)treeView1.SelectedNode.Tag);
                 treeView1.SelectedNode.Remove();
-            }
-
+            }                           
         }
 
         private void addfolder_Click(object sender, EventArgs e)
@@ -81,6 +82,34 @@ namespace folder_management
             Directory.CreateDirectory(pathstring+"\\"+textBox1.Text);
             treeView1.Nodes.Clear();
             treeView1.Nodes.Add(Makenode(ppath));
+            
+        }
+
+        private void treeView1_AfterExpand(object sender, TreeViewEventArgs e)
+        {
+            e.Node.Nodes.Clear();
+            foreach (string d in Directory.GetDirectories((string)e.Node.Tag))
+            {
+                TreeNode tn = new TreeNode();
+                tn.Tag = d;
+                tn.Text = Path.GetFileName(d);
+                tn.Nodes.Add("");
+                e.Node.Nodes.Add(tn);
+            }
+            foreach (string d in Directory.GetFiles((string)e.Node.Tag))
+            {
+                TreeNode tn = new TreeNode();
+                tn.Tag = d;
+                tn.Text = Path.GetFileName(d);
+                e.Node.Nodes.Add(tn);
+            }
+        }
+
+        private void treeView1_AfterCollapse(object sender, TreeViewEventArgs e)
+        {
+            e.Node.Nodes.Clear();
+            e.Node.Nodes.Add("");
+
             
         }
     }
